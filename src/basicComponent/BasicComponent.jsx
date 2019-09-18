@@ -13,16 +13,22 @@ class BasicComponent extends React.Component {
   }
 
   changeFestival= () => {
-    this.setState({festival: 'holi'})
+    this.setState({festival: 'dussera'})
   }
 
   render() {
     return (
-    <div>
+        <div>
+          <BasicStateless name="chef" world="hello"/>
+            {this.state.festival}
+          <button type="button" onClick={this.changeFestival}>Change Festival</button>
+        </div>
+    /*<div>
       <BasicStateless name='navya'/>
       <BasicPropsComponent firstName='navya'/>{this.state.festival}
       <button type="button" onClick={this.changeFestival}>Change Festival</button>
-    </div>);
+    </div>*/
+    );
   }
 };
 

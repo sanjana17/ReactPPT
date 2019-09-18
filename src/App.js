@@ -10,8 +10,10 @@ import BasicStateLess from './BasicStateless/BasicStateless';
 function App() {
   return (
     <div className="App">
+        hello world
       <Router>
       <Route exact path="/basicComponent" component={ BasicComponent } />
+      <Route exact path="/helloWorld" component={ BasicComponent } />
       <Route exact path="/basicForm" component={ BasicForm } />
       <Route exact path="/basicStateless" render={() => <BasicStateLess name='app'/>}/>
       </Router>
