@@ -1,24 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import BasicComponent from './basicComponent/BasicComponent'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import BasicForm from './BasicForm/BasicForm';
+import BasicStateLess from './BasicStateless/BasicStateless';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+      <Route exact path="/basicComponent" component={ BasicComponent } />
+      <Route exact path="/basicForm" component={ BasicForm } />
+      <Route exact path="/basicStateless" render={() => <BasicStateLess name='app'/>}/>
+      </Router>
     </div>
   );
 }
